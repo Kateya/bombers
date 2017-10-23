@@ -3,12 +3,16 @@
 //déclaration de l'objet personnage (joueur et ennemis)
 
 var player = document.getElementById("perso");
+console.log(player);
 var wall = document.getElementsByClassName("wall");
 
 //position du joueur
 
-var rightPlayerPosition = parseInt(document.getElementById("perso").style.right);
+var leftPlayerPosition = parseInt(document.getElementById("perso").style.left);
 var topPlayerPosition = parseInt(document.getElementById("perso").style.top);
+
+console.log(leftPlayerPosition);
+console.log(topPlayerPosition);
 
     document.addEventListener("keydown",function(evenement) {
         startGame(evenement);
@@ -40,8 +44,8 @@ function moveRight() {
     //verification de la position du personnage => S'il n'est pas contre un mur, il peut bouger. Défininition de classes non traversables.
 
     //déplacement 
-    rightPlayerPosition += 65;
-    player.style.right = rightPlayerPosition + "px";
+    leftPlayerPosition += 65;
+    player.style.left = leftPlayerPosition + "px";
 }
 
 //mouvement à gauche
@@ -49,8 +53,8 @@ function moveLeft() {
     //verification de la position du personnage => S'il n'est pas contre un mur, il peut bouger. Défininition de classes non traversables.
 
     //déplacement 
-    rightPlayerPosition -= 65;
-    player.style.right = rightPlayerPosition + "px";
+    leftPlayerPosition -= 65;
+    player.style.left = leftPlayerPosition + "px";
 }
 
 //mouvement en haut
@@ -58,7 +62,7 @@ function moveUp() {
     //verification de la position du personnage => S'il n'est pas contre un mur, il peut bouger. Défininition de classes non traversables.
 
     //déplacement 
-    topPlayerPosition += 65;
+    topPlayerPosition -= 65;
     player.style.top= topPlayerPosition + "px";
 }
 
@@ -67,7 +71,7 @@ function moveDown() {
     //verification de la position du personnage => S'il n'est pas contre un mur, il peut bouger. Défininition de classes non traversables.
 
     //déplacement 
-    topPlayerPosition -= 65;
+    topPlayerPosition += 65;
     player.style.top= topPlayerPosition + "px";
 }
 

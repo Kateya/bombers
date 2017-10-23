@@ -7,7 +7,7 @@ function test(){
 
         for(var x = 0; x < 13; x++)
         {
-            grid.innerHTML = grid.innerHTML + "<div class='carre' style='left:"+x*65+"px;top:"+y*65+"px;'></div>";        
+            grid.innerHTML = grid.innerHTML + "<div class='carre' id='"+y+x+"'style='left:"+x*65+"px;top:"+y*65+"px;'></div>";        
             console.log(x,y);
             
         }   
