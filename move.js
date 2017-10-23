@@ -10,14 +10,9 @@ var wall = document.getElementsByClassName("wall");
 var rightPlayerPosition = parseInt(document.getElementById("perso").style.right);
 var topPlayerPosition = parseInt(document.getElementById("perso").style.top);
 
-function carac(type) = {
-    this.type = type;
-    this.health = health;
-    this.strength = strength;
-}
     document.addEventListener("keydown",function(evenement) {
         startGame(evenement);
-    }
+    });
 function startGame(event) {
     //déplacement
 
@@ -50,7 +45,7 @@ function moveRight() {
 }
 
 //mouvement à gauche
-function moveLeft) {
+function moveLeft() {
     //verification de la position du personnage => S'il n'est pas contre un mur, il peut bouger. Défininition de classes non traversables.
 
     //déplacement 
@@ -78,7 +73,7 @@ function moveDown() {
 
 //posage bombe
 function dropBomb() {
-    document.getElementById('body').innerHTML = "<div class="bomb"></div>";
+    document.getElementById('body').innerHTML = "<div class='bomb'></div>";
     bomb.style.top = player.style.top;
     bomb.style.right = player.style.right;
 }
