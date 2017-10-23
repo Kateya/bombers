@@ -2,7 +2,16 @@
     height: 65px;
     width: 65px;
     border: 1px solid black;
-    bottom: 600px;
-    left :250px;
+    bottom: 0px;
+    left :0px;
     position:absolute;
+}
+
+#perso{
+    height: 65px;
+    width: 65px;
+    background-color: blue;
+    position: absolute;
+    top:585px;
+    left :325px;
 }
