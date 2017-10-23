@@ -3,16 +3,12 @@
 //déclaration de l'objet personnage (joueur et ennemis)
 
 var player = document.getElementById("perso");
-console.log(player);
 var wall = document.getElementsByClassName("wall");
 
 //position du joueur
 
 var leftPlayerPosition = parseInt(document.getElementById("perso").style.left);
 var topPlayerPosition = parseInt(document.getElementById("perso").style.top);
-
-console.log(leftPlayerPosition);
-console.log(topPlayerPosition);
 
     document.addEventListener("keydown",function(evenement) {
         startGame(evenement);
@@ -77,7 +73,5 @@ function moveDown() {
 
 //posage bombe
 function dropBomb() {
-    document.getElementById('body').innerHTML = "<div class='bomb'></div>";
-    bomb.style.top = player.style.top;
-    bomb.style.right = player.style.right;
+    document.getElementById('bombContainer').innerHTML += "<div class='bomb' style='top:"+topPlayerPosition+"px; left:"+ leftPlayerPosition+"px;'></div>";
 }
