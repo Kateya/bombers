@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width : 960px;
+    margin : 10px auto;
+  }
+
+
+.col {
+-ms-flex-preferred-size: 0;
+    flex-basis: 0;
+-ms-flex-positive: 1;
+    flex-grow: 1;
+max-width: 100%;
+
+}
+.col-1 {
+    height: 65px;
+    width: 65px;
+    border: 2px solid black;
+  }
+@media only screen and (max-width:500px) {
+.row {
+    width : 100%;
+}
+.row > div { 
+    margin : 0 1%;
+}
+.w-1, .w-2, .w-3, .w-4, .w-5, .w-6, .w-7, .w-8, .w-9, .w-10, .w-11, .w-12 { 
+    width : 98%; 
+    float : none;
+}
+}
