@@ -15,15 +15,28 @@ function carac(type) = {
     this.health = health;
     this.strength = strength;
 }
-
-function startGame {
+    document.addEventListener("keydown",function(evenement) {
+        startGame(evenement);
+    }
+function startGame(event) {
     //déplacement
-    onkeydown= if (event.keyCode == 39) moveRight();
-    onkeydown= if (event.keyCode == 37) moveLeft();
-    onkeydown= if (event.keyCode == 38) moveUp();
-    onkeydown= if (event.keyCode == 40) moveDown();
+
+    if (event.keyCode == 39) {
+        moveRight();
+    }
+    if (event.keyCode == 37) {
+        moveLeft();
+    }
+    if (event.keyCode == 38) {
+        moveUp();
+    }
+    if (event.keyCode == 40)  {
+        moveDown();
+    }
     //bombe touche espace
-    onkeydown= if (event.keyCode == 32) dropBomb();
+    if (event.keyCode == 32) {
+        dropBomb();
+    }
 }
 
 
