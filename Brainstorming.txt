@@ -1,0 +1,23 @@
+Brainstorming
+
+- Faire une grille
+- Positionner en absolute un petit personnage
+
+- Le déplacement :
+	- trouver le numéro des touches
+	- trouver touche espace (pour bombe)
+
+- Timer explosion
+- Condition de destruction
+
+- Créer l'interface d'acceuil (play + regle et touches)
+- Créer ecran Game over/Win
+
+
+Graphisme : 
+
+- Fond
+- Grille
+- un perso
+- des murs 
+- bombes
