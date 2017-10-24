@@ -3,11 +3,8 @@
 //déclaration de l'objet personnage (joueur et ennemis)
 
 var player = document.getElementById("perso");
-var wall = document.getElementsByClassName("wall");
+var mob = document.getElementById("mob");
 //position du joueur
-
-var leftPlayerPosition = parseInt(document.getElementById("perso").style.left);
-var topPlayerPosition = parseInt(document.getElementById("perso").style.top);
 
     document.addEventListener("keydown",function(evenement) {
         startGame(evenement);
@@ -15,16 +12,16 @@ var topPlayerPosition = parseInt(document.getElementById("perso").style.top);
 function startGame(event) {
     //déplacement
         if (event.keyCode == 39) {
-            moveRight();
+            moveRight(player);
         }
         if (event.keyCode == 37) {
-            moveLeft();
+            moveLeft(player);
         }
         if (event.keyCode == 38) {
-            moveUp();
+            moveUp(player);
         }
         if (event.keyCode == 40)  {
-            moveDown();
+            moveDown(player);
         }
         //bombe touche espace
         if (event.keyCode == 32) {
@@ -34,68 +31,61 @@ function startGame(event) {
 }
 
 //mouvement à droite
-function moveRight() {
+function moveRight(character) {
+    var leftCharacterPosition = parseInt(character.style.left);
+    var topCharacterPosition = parseInt(character.style.top);
     //verification de la position du personnage => S'il n'est pas contre un mur, il peut bouger. Défininition de classes non traversables.
-    if (leftPlayerPosition < 750) {        
+    if (leftCharacterPosition < 750) {        
     //déplacement 
-        leftPlayerPosition += 65;
-        player.style.left = leftPlayerPosition + "px";
+    leftCharacterPosition += 65;
+        character.style.left = leftCharacterPosition + "px";
         }
     else {
-        player.style.left = leftPlayerPosition + "px";
+        character.style.left = leftCharacterPosition + "px";
     }
 }
 
 //mouvement à gauche
-function moveLeft() {
+function moveLeft(character) {
+    var leftCharacterPosition = parseInt(character.style.left);
+    var topCharacterPosition = parseInt(character.style.top);
     //verification de la position du personnage => S'il n'est pas contre un mur, il peut bouger. Défininition de classes non traversables.
-    if (0 < leftPlayerPosition) {        
+    if (0 < leftCharacterPosition) {        
     //déplacement 
-        leftPlayerPosition -= 65;
-        player.style.left = leftPlayerPosition + "px";
+    leftCharacterPosition -= 65;
+        character.style.left = leftCharacterPosition + "px";
         }
     else {
-        player.style.left = leftPlayerPosition + "px";
+        character.style.left = leftCharacterPosition + "px";
     }
 }
 
 //mouvement en haut
-function moveUp() {
+function moveUp(character) {
+    var leftCharacterPosition = parseInt(character.style.left);
+    var topCharacterPosition = parseInt(character.style.top);
     //verification de la position du personnage => S'il n'est pas contre un mur, il peut bouger. Défininition de classes non traversables.
-    if (0 < topPlayerPosition) {
+    if (0 < topCharacterPosition) {
         //déplacement 
-        topPlayerPosition -= 65;
-        player.style.top= topPlayerPosition + "px";
+        topCharacterPosition -= 65;
+        character.style.top= topCharacterPosition + "px";
     }
     else {
-        player.style.top = topPlayerPosition + "px";
+        character.style.top = topCharacterPosition + "px";
     }
 }
 
 //mouvement en bas
-function moveDown() {
+function moveDown(character) {
+    var leftCharacterPosition = parseInt(character.style.left);
+    var topCharacterPosition = parseInt(character.style.top);
     //verification de la position du personnage => S'il n'est pas contre un mur, il peut bouger. Défininition de classes non traversables.
-    if (topPlayerPosition < 585) {
+    if (topCharacterPosition < 585) {
         //déplacement 
-    topPlayerPosition += 65;
-    player.style.top = topPlayerPosition + "px";
+        topCharacterPosition += 65;
+    character.style.top = topCharacterPosition + "px";
     }
     else {
-    player.style.top = topPlayerPosition + "px";
+        character.style.top = topCharacterPosition + "px";
     }
-}
-
-//posage bombe
-function dropBomb() {
-    var div = document.createElement("div");
-    div.style.top = topPlayerPosition + "px";
-    div.style.left = leftPlayerPosition + "px";
-    div.style.visibility = "visible";
-    div.className = "bomb"
-    document.body.appendChild(div);
-    //gestion du comportement de la bombe : explosion et dégâts.
-    setTimeout(function(){
-        div.style.visibility = "hidden";
-    },1500);
-    
 }
