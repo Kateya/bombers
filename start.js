@@ -32,4 +32,4 @@ function startGame(event) {
 }
    //déplacements mob
         
-mobMove();
+   setInterval("mobMove()",1000);
