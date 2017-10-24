@@ -1,3 +1,5 @@
+var leftPlayerPosition = parseInt(document.getElementById("perso").style.left);
+var topPlayerPosition = parseInt(document.getElementById("perso").style.top);
 //posage bombe
 function dropBomb() {
     var div = document.createElement("div");
