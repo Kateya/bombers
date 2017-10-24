@@ -12,6 +12,7 @@
     width: 65px;
     background-color: blue;
     position: absolute;
+    /*positionne le joueur au dessus des bombes*/
     z-index: 1000;
 }
 
@@ -20,4 +21,13 @@
      width: 65px;
      background-color: red;
      position: absolute;
+ }
+
+ .mob {
+    height: 65px;
+    width: 65px;
+    background-color: rgb(255, 251, 0);
+    position: absolute;
+    /*positionne le mob au dessus des bombes*/
+    z-index: 1000;
  }

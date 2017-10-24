@@ -1,7 +1,7 @@
 var grid = document.getElementById('grid');
 
 
-function test(){
+function gridGenerator(){
     for(var y = 0; y < 10; y++)
     {  
 
@@ -13,4 +13,4 @@ function test(){
         }   
     }
 }
-test();
+gridGenerator();

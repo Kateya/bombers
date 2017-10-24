@@ -1,34 +1,28 @@
 // ce fichier gère les déplacements et la pose des bombes
+//génération auto des mouvements des mobs
 
-//déclaration de l'objet personnage (joueur et ennemis)
+function mobMove() {
 
-var player = document.getElementById("perso");
-var mob = document.getElementById("mob");
-//position du joueur
-
-    document.addEventListener("keydown",function(evenement) {
-        startGame(evenement);
-    });
-function startGame(event) {
-    //déplacement
-        if (event.keyCode == 39) {
-            moveRight(player);
-        }
-        if (event.keyCode == 37) {
-            moveLeft(player);
-        }
-        if (event.keyCode == 38) {
-            moveUp(player);
-        }
-        if (event.keyCode == 40)  {
-            moveDown(player);
-        }
-        //bombe touche espace
-        if (event.keyCode == 32) {
-            dropBomb();
-        }
-    
+    var direction = Math.floor(Math.random()*4)
+    if (direction == 1) {
+        moveRight(mob);
+    }
+    else if (direction == 2) {
+        moveLeft(mob);
+    }
+    else if (direction == 3) {
+        moveDown(mob);
+    }
+    else {
+        moveUp(mob);
+    }
 }
+/*
+    for (var i = 0; i < mobs.length; i++) {
+        var element = mobs[i];*/        
+    
+
+
 
 //mouvement à droite
 function moveRight(character) {
