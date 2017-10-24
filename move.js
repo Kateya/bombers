@@ -4,8 +4,6 @@
 
 var player = document.getElementById("perso");
 var wall = document.getElementsByClassName("wall");
-var bomb;
-
 //position du joueur
 
 var leftPlayerPosition = parseInt(document.getElementById("perso").style.left);
@@ -89,14 +87,15 @@ function moveDown() {
 
 //posage bombe
 function dropBomb() {
-    document.getElementById('bombContainer').innerHTML += "<div class='bomb' style= 'visibility:visible; top:"+topPlayerPosition+"px; left:"+ leftPlayerPosition+"px;'></div>";
-    bomb = document.getElementsByClassName('bomb');
-    console.log(bomb.style.top);
-    setTimeout(explosionBomb, 900);
-}
-
-//gestion du comportement de la bombe : explosion et dégâts.
-
-function explosionBomb() {
-
+    var div = document.createElement("div");
+    div.style.top = topPlayerPosition + "px";
+    div.style.left = leftPlayerPosition + "px";
+    div.style.visibility = "visible";
+    div.className = "bomb"
+    document.body.appendChild(div);
+    //gestion du comportement de la bombe : explosion et dégâts.
+    setTimeout(function(){
+        div.style.visibility = "hidden";
+    },1500);
+    
 }
