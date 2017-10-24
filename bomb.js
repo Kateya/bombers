@@ -12,6 +12,12 @@ function dropBomb() {
     //gestion du comportement de la bombe : explosion et dégâts.
     setTimeout(function(){
         div.style.visibility = "hidden";
+        explosionBomb(topPlayerPosition,leftPlayerPosition);
     },1500);
-    
 }
+
+function explosionBomb(x,y) {
+    var tile = String(x)+ String(y);
+    console.log(tile);
+}
+

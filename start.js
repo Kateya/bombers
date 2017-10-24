@@ -2,8 +2,7 @@
 //déclaration de l'objet personnage (joueur et ennemis)
 
 var player = document.getElementById("perso");
-var mob = document.getElementsByClassName("mob");
-mob = mob[0];
+var mobs = document.getElementsByClassName("mob");
 //position du joueur
 
     document.addEventListener("keydown",function(evenement) {

@@ -3,23 +3,23 @@
 
 function mobMove() {
 
-    var direction = Math.floor(Math.random()*4)
-    if (direction == 1) {
-        moveRight(mob);
-    }
-    else if (direction == 2) {
-        moveLeft(mob);
-    }
-    else if (direction == 3) {
-        moveDown(mob);
-    }
-    else {
-        moveUp(mob);
-    }
-}
-/*
     for (var i = 0; i < mobs.length; i++) {
-        var element = mobs[i];*/        
+    var element = mobs[i];
+    var direction = Math.floor(Math.random()*4)
+        if (direction == 1) {
+            moveRight(mobs[i]);
+        }
+        else if (direction == 2) {
+            moveLeft(mobs[i]);
+        }
+        else if (direction == 3) {
+            moveDown(mobs[i]);
+        }
+        else {
+            moveUp(mobs[i]);
+        }
+    }
+}       
     
 
 
