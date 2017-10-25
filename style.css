@@ -1,7 +1,8 @@
 .carre{
     height: 65px;
     width: 65px;
-    border: 1px solid black;
+    border: 1px solid #A1A1A1;
+    background-image:url("images/tile.jpg");
     bottom: 0px;
     left :0px;
     position:absolute;
@@ -10,7 +11,7 @@
 #perso{
     height: 65px;
     width: 65px;
-    background-color: blue;
+    background-image:url("images/perso.png");
     position: absolute;
     /*positionne le joueur au dessus des bombes*/
     z-index: 1000;
@@ -19,14 +20,14 @@
  .bomb {
      height: 65px;
      width: 65px;
-     background-color: red;
+     background-image: url("images/bombotasse.png");
      position: absolute;
  }
 
  .mob {
     height: 65px;
     width: 65px;
-    background-color: rgb(255, 251, 0);
+    background-image: url("images/monster.png");
     position: absolute;
     /*positionne le mob au dessus des bombes*/
     z-index: 1000;
