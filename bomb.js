@@ -21,7 +21,6 @@ function dropBomb() {
 function explosionBomb(x,y) {
     var tileTopOrigin = x;
     var tileLeftOrigin = y;
-    console.log(topBombposition);
 
     var tileUp = x-65;
     var tileDown = x+65;
@@ -33,28 +32,33 @@ function explosionBomb(x,y) {
     divUp.style.top = tileUp + "px";
     divUp.style.left = tileLeftOrigin + "px";
     grid.appendChild(divUp);
+    wallCollision (tileLeftOrigin,tileDown,divUp);
     //ciblage tuile du bas
     var divDown = document.createElement("div");
     divDown.className = "degats";
     divDown.style.top = tileDown + "px";
     divDown.style.left = tileLeftOrigin + "px";
     grid.appendChild(divDown);
+    wallCollision (tileLeftOrigin,tileDown,divDown);
     //ciblage tuile de gauche
     var divLeft = document.createElement("div");
     divLeft.className = "degats";
     divLeft.style.top = tileTopOrigin + "px";
     divLeft.style.left = tileLeft + "px";
     grid.appendChild(divLeft);
+    wallCollision (tileLeft,tileTopOrigin,divLeft);
     //ciblage tuile de droite
     var divRight = document.createElement("div");
     divRight.className = "degats";
     divRight.style.top = tileTopOrigin + "px";
     divRight.style.left = tileRight + "px";
     grid.appendChild(divRight);
+    wallCollision (tileRight,tileTopOrigin,divRight);
     //ciblage tuile au centre
     var divCenter = document.createElement("div");
     divCenter.className = "degats";
     divCenter.style.top = tileTopOrigin + "px";
     divCenter.style.left = tileLeftOrigin + "px";
     grid.appendChild(divCenter);
+    wallCollision (tileLeftOrigin,tileTopOrigin,divCenter);
 }

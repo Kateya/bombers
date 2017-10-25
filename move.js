@@ -1,8 +1,9 @@
 // ce fichier gère les déplacements et la pose des bombes
 //génération auto des mouvements des mobs
-var grid = document.getElementById("grid");
+
 
 function mobMove() {
+   var grid = document.getElementById("grid");
     player.x = parseInt(player.style.left);
     player.y = parseInt(player.style.top);
     player.width = 65;
@@ -10,12 +11,13 @@ function mobMove() {
     console.log(player);
     for (var i = 0; i < mobs.length; i++) {
     var element = mobs[i];
-    mobs[i].x = parseInt(mobs[i].style.left);
-    mobs[i].y = parseInt(mobs[i].style.top);
-    mobs[i].width = 65;
-    mobs[i].height = 65;
+    mobs[i].x = (parseInt(mobs[i].style.left))+1;
+    mobs[i].y = (parseInt(mobs[i].style.top))+1;
+    mobs[i].width = 63;
+    mobs[i].height = 63;
     if (isCollide(player, mobs[i]) == true) {
         grid.removeChild(player);
+        gameOver();
     }
     var direction = Math.floor(Math.random()*4)
         if (direction == 1) {

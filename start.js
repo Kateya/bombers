@@ -29,6 +29,15 @@ function startGame(event) {
         }
     
 }
+
+function gameOver() {
+    alert("Vous avez perdu !")
+}
+
+function victory () {
+    alert("Vous avez gagné !")
+}
    //déplacements mob
         
    setInterval("mobMove()",1000);
+

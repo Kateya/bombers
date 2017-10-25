@@ -39,3 +39,11 @@
     background-image:url("images/coffeetile1.png");
     position: absolute;
  }
+
+ .destructibles {
+    height: 65px;
+    width: 65px;
+    background-image: url("images/laptop.png");
+    position: absolute;
+    z-index: 1000;
+ }
