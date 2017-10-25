@@ -1,3 +1,107 @@
+body {
+    width : 1200px;
+    height:800px;
+    background-image:url("images/fond_ecran.jpg");
+    position: fixed;
+}
+
+/*style de l'écran d'accueil*/
+
+* {
+    font-family: Helvetica, sans-serif; 
+}
+
+#play {
+    width:380px; 
+    height:315px;
+    margin-top: 30px;
+    margin: auto;
+    margin-top: 105px;
+    margin-right: 416px;
+}
+
+#dedicace {
+    background-color:#343434; 
+    padding-bottom: 1px;
+    padding-top: 0px;
+    margin-top: 103px;
+}
+
+#flex {
+    display:flex;
+    position: center;
+    color: #fff;
+    
+}
+
+h1 {
+    font-size: 48px;
+    padding-top: 26px;
+    color:white;
+    text-align: center;
+}
+
+span{
+    border-bottom-color: white;
+    border-bottom: solid;
+}
+
+.tin {
+    background-color:#D31F43;
+}
+
+.button {
+    padding-top: 63px;
+    padding-left: 39px;
+}
+    
+#start {
+    width: 61px;
+    height: 20px;
+    padding-top: 17px;
+    background-color: black;
+    color:white;
+}
+
+#rules{
+    padding-left:-8px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#haut{
+    background-image:url("images/haut.png");
+    background-repeat: no-repeat;
+    padding-left: 37px;
+    padding-bottom: 8px;
+    padding-top: 4px;
+}
+
+#bas{
+    background-image:url("images/bas.png");
+    background-repeat: no-repeat;
+    padding-left: 37px;
+    padding-bottom: 8px;
+    padding-top: 4px;
+}
+
+#droite{
+    background-image:url("images/droite.png");
+    background-repeat: no-repeat;
+    padding-left: 37px;
+    padding-bottom: 8px;
+    padding-top: 4px;
+}
+
+#gauche{
+    background-image:url("images/gauche.png");
+    background-repeat: no-repeat;
+    padding-left: 37px;
+    padding-bottom: 8px;
+    padding-top: 4px;
+}
 .carre{
     height: 65px;
     width: 65px;
@@ -44,6 +148,22 @@
     height: 65px;
     width: 65px;
     background-image: url("images/laptop.png");
+    position: absolute;
+    z-index: 1000;
+ }
+
+ .destructiblesred {
+    height: 65px;
+    width: 65px;
+    background-image: url("images/pouf.png");
+    position: absolute;
+    z-index: 1000;
+ }
+
+ .indestructibles{
+    height: 65px;
+    width: 65px;
+    background-image: url("images/brick.jpg");
     position: absolute;
     z-index: 1000;
  }

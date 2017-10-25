@@ -11,6 +11,29 @@
 </head>
 <body>
     
+    <section id="play">
+        <div id="dedicace">
+            <code>
+            <h1>&lt;<span>BOMBER'</span><span class="tin">TIN</span>&gt;</h1>
+            </code>
+        </div>
+        <div id="flex">
+            <div class="button">
+            <button id="start">Commencer le game</button>
+            </div>
+            <div id="rules">
+            <h2>Comment jouer :</h2>
+            <ul>
+                <li id="haut">Se déplacer vers le haut</li>
+                <li id="bas">Se déplacer vers le bas</li>
+                <li id="gauche">Se déplacer à gauche</li>
+                <li id="droite">Se déplacer à droite</li>
+                <li><span>SPACE</span>Déposer une Bomb'o'tasse </li>
+            </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="grid">
             <div id="perso" style="top:585px; left:325px;"></div>
             <div class="mob" style="top:130px; left:390px;"></div>
@@ -20,7 +43,15 @@
             <div class="destructibles" style="top:130px; left:520px;"></div>
             <div class="destructibles" style="top:130px; left:650px;"></div>
             <div class="destructibles" style="top:130px; left:455px;"></div>
-            <div class="indestructibles"></div>
+            <div class="destructiblesred" style="top:195px; left:260px;"></div>
+            <div class="destructiblesred" style="top:455px; left:260px;"></div>
+            <div class="destructiblesred" style="top:390px; left:650px;"></div>
+            <div class="indestructibles" style="top:65px; left:780px;"></div>
+            <div class="indestructibles" style="top:65px; left:130px;"></div>
+            <div class="indestructibles" style="top:520px; left:65px;"></div>
+            <div class="indestructibles" style="top:390px; left:455px;"></div>
+            <div class="indestructibles" style="top:520px; left:780px;"></div>
+            <div class="indestructibles" style="top:260px; left:65px;"></div>
     </section>
     <script src="collide.js"></script>
     <script src="wallCollision.js"></script>
@@ -28,5 +59,7 @@
     <script src="bomb.js"></script>  
     <script src="move.js"></script>
     <script src="start.js"></script>
+    <script src="menu.js"></script>
+    <script src="accueil.js"></script>
 </body>
 </html>
