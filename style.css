@@ -32,3 +32,10 @@
     /*positionne le mob au dessus des bombes*/
     z-index: 1000;
  }
+
+.degats{
+    height: 65px;
+    width: 65px;
+    background-image:url("images/coffeetile1.png");
+    position: absolute;
+ }
